@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <title>Eibar Ikasleak - Main Page - Zerrenda</title>
+    <link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css" />
+  </head>
+  <body>
+    <div class="page-header">
+      <h2><a href="/">Ikasleak - Zerrenda</a></h2>
+      <h2><a href="{% url 'ikasle-gehitu' %}"><span class="glyphicon glyphicon-plus">Ikasle berri bat gehitu</span></a></h2>
+      <h2><a href="{% url 'nota-sartu' %}"><span class="glyphicon glyphicon-plus">Ikasle batek ikasgai batean duen nota sartu</span></a></h2>
+      <h2><a href="{% url 'nota-zerrenda' %}"><span class="glyphicon glyphicon-plus">Ikasle batek ikasgai batean duen nota aldatu</span></a></h2>
+      <h2><a href="{% url 'ikasgaia-gehitu' %}"><span class="glyphicon glyphicon-plus">Ikasgai berri bat sartu</span></a></h2>
+      <h2><a href="{% url 'ikasle-ezabatu' %}"><span class="glyphicon glyphicon-plus">Ikasle bat ezabatu</span></a></h2>
+    </div>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -7,6 +7,10 @@ class Ikasle(models.Model):
     izena = models.CharField(max_length=75)
     abizena = models.CharField(max_length=100)
 
+    # Balio berdinak ez sartzeko balidazioa
+    class Meta:
+        unique_together = ('izena', 'abizena')
+        
     def __str__(self):
         return f"{self.izena} {self.abizena}"
     
@@ -16,6 +20,10 @@ class Ikasgaiak(models.Model):
     maila = models.CharField(max_length=50)
     hizkuntza = models.CharField(max_length=50)
     
+    # Balio berdinak ez sartzeko balidazioa
+    class Meta:
+        unique_together = ('izena', 'maila', 'hizkuntza')
+        
     def __str__(self):
         return f"{self.izena}"
     

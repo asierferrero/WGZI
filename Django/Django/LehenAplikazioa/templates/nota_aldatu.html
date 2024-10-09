@@ -1,27 +1,16 @@
 <html>
   <body>
     {% extends 'base.html' %}
+
     {% block content %}
       <h1>Nota aldatu</h1>
-      <table style="width: 100%;">
-        <thead>
-          <tr>
-            <th>Ikasle</th>
-            <th>Ikasgai</th>
-            <th>Nota</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for nota in notak %}
-          <tr>
-            <td>{{ nota.ikasle }}</td>
-            <td>{{ nota.ikasgai }}</td>
-            <td>{{ nota.nota }}</td>
-            <td><a href="{% url 'nota-aldatu'%}" class="btn btn-default">Aldatu</a></td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>      
+
+      <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <button type="submit" class="save btn btn-default">Gorde</button>
+      </form>
     {% endblock %}
   </body>
 </html>

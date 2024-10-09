@@ -1,0 +1,25 @@
+<html>
+  <body>
+    {% extends 'base.html' %}
+    {% block content %}
+      <h1>Ikaslea ezabatu</h1>
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Izena</th>
+            <th>Abizena</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for ikasle in ikasleak %}
+          <tr>
+            <td>{{ ikasle.izena }}</td>
+            <td>{{ ikasle.abizena }}</td>
+            <td><a href="{% url 'ikasle-ezabatu' ikasle.id %}" class="btn btn-default" method="post">Ezabatu</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>      
+    {% endblock %}
+  </body>
+</html>

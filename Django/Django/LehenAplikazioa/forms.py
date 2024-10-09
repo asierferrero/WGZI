@@ -11,6 +11,11 @@ class NotaForm(forms.ModelForm):
         model = Notak
         fields = ['nota', 'ikasgai', 'ikasle']
         
+class NotaAldatuForm(forms.ModelForm):
+    class Meta:
+        model = Notak
+        fields = ['nota']
+        
 class IkasgaiaForm(forms.ModelForm):
     class Meta:
         model = Ikasgaiak

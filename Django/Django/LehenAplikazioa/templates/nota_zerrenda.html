@@ -17,7 +17,7 @@
             <td>{{ nota.ikasle }}</td>
             <td>{{ nota.ikasgai }}</td>
             <td>{{ nota.nota }}</td>
-            <td><a {% comment %} href="{% url 'nota-aldatu'%}" {% endcomment %} class="btn btn-default">Aldatu</a></td>
+            <td><a href="{% url 'nota-aldatu' nota.id %}" class="btn btn-default">Aldatu</a></td>
           </tr>
           {% endfor %}
         </tbody>

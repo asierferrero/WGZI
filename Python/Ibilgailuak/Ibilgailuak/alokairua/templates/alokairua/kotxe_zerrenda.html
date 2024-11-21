@@ -1,0 +1,10 @@
+<h1>Kotxe Zerrenda</h1>
+<ul>
+    {% for kotxe in kotxeak %}
+        <li>{{ kotxe.marka }} {{ kotxe.modeloa }} - {{ kotxe.matrikula }} - Egoera: {{ kotxe.egoera }}
+        {% if kotxe.egoera == "libre" %}
+            <a href="{% url 'kotxe_alokatu' kotxe.id %}">Alokatu</a>
+        {% endif %}
+        </li>
+    {% endfor %}
+</ul>

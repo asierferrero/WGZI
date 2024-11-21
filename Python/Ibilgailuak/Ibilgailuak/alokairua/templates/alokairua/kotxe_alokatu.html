@@ -1,0 +1,6 @@
+<h1>{{ kotxe.marka }} {{ kotxe.modeloa }} alokatu</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Formulario osoa bistaratzen dugu as_p erabiliz (paragrafoetan) -->
+    <input type="submit" value="Alokatu">
+</form>

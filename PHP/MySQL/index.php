@@ -50,7 +50,7 @@ $conn->close();
                         echo "<td>" . $row["tamaina"] . "</td>";
                         echo "<td>" . $row["extrak"] . "</td>";
                         if (!empty($row["irudia"])) {
-                            echo "<td><a href='" . $row["irudia"] . "'>Irudia ikusi</a></td>";
+                            echo "<td><a href='img/" . $row["irudia"] . "'>Irudia ikusi</a></td>";
                         } else {
                             echo "<td></td>";
                         }

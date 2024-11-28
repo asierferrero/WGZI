@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $irudia = '';
     if (isset($_FILES['irudia']) && $_FILES['irudia']['error'] == 0) {
-        $irudia = 'img/' . basename($_FILES['irudia']['name']);
+        $irudia = basename($_FILES['irudia']['name']);
         move_uploaded_file($_FILES['irudia']['tmp_name'], $irudia);
     }
 

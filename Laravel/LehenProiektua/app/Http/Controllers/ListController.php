@@ -25,9 +25,9 @@ class ListController extends Controller
 
         if ($character) {
             $character->delete();
-            return $this->show();
+            return redirect('/');
         } else {
-            return $this->show();
+            return redirect('/');
         }
     }
 }

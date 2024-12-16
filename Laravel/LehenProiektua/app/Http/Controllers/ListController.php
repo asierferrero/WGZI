@@ -19,4 +19,16 @@ class ListController extends Controller
         return view('character-list', ['characters' => $characters]);
     }
 
+    public function delete($id)
+    {
+        $character = \App\Models\Character::find($id);
+
+        if ($character) {
+            $character->delete();
+            return $this->show();
+        } else {
+            return $this->show();
+        }
+    }
 }
+

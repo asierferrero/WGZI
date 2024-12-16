@@ -9,4 +9,10 @@ class Character extends Model
 {
     /** @use HasFactory<\Database\Factories\CharacterFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'actor',
+        'name',
+        'description',
+        ];
 }

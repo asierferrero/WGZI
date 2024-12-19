@@ -4,6 +4,7 @@ return [
  'filter' => 'Filtroa ezabatu',
  'name' => 'Izena',
  'character' => 'Pertsonaia',
+ 'edit_character' => 'Pertsonaiaren informazioa aldatu',
  'new' => 'Pertsonaia berria gehitu',
  'login' => 'Beharrezkoa da saioa hastea zerrenda ikusteko 😜😜>>', 
  'default' => 'bilaketa lehenetsia',

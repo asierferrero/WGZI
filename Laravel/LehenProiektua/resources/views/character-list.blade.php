@@ -15,12 +15,14 @@
                             <th>{{ __('messages.name') }}</th>
                             <th>{{ __('messages.actor') }}</th>
                             <th></th>
+                            <th></th>
                         </tr>
                         @foreach($characters as $character)
                             <tr>
                                 <td>{{ $character->name }}</td>
                                 <td>{{ $character->actor }}</td>
                                 <td><a href="{{ route('delete', ['id' => $character->id]) }}" class="btn">🗑️</a></td>
+                                <td><a href="{{ route('edit', ['id' => $character->id]) }}" class="btn">✏️</a></td>
                             </tr>
                         @endforeach
                     </table>

@@ -14,5 +14,12 @@ class Character extends Model
         'actor',
         'name',
         'description',
-        ];
+        'house_id'
+    ];
+
+    public function house(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(House::class);
+    }
+
 }

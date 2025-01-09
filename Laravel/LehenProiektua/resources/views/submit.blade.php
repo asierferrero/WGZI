@@ -30,8 +30,20 @@
             </div><br>
             <div class="form-group{{ $errors->has('description') ? ' haserror' : '' }}">
                 <label for="description">{{ __('messages.description') }}</label>
-                <textarea class="form-control" id="description" name="description" placeholder="{{ __('messages.description') }}">{{ old('description')
+                <textarea class="form-control" id="description" name="description"
+                    placeholder="{{ __('messages.description') }}">{{ old('description')
 }}</textarea>
+                @if($errors->has('description'))
+                    <span class="help-block">{{ $errors->first('description') }}</span>
+                @endif
+            </div><br>
+            <div class="form-group{{ $errors->has('house_id') ? ' has-error' : '' }}">
+                <label for="house_id">{{ __('messages.house') }}</label>
+                <select class="form-control" id="house_id" name="house_id">
+                    @foreach($houses as $house)
+                        <option value="{{$house->id}}">{{$house->name}}</option>
+                    @endforeach
+                </select>
                 @if($errors->has('description'))
                     <span class="help-block">{{ $errors->first('description') }}</span>
                 @endif

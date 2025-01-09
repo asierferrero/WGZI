@@ -8,7 +8,9 @@ class FormController extends Controller
 {
     public function show()
     {
-        return view('submit');
+        $houses = \App\Models\House::all();
+        return view('submit', ['houses' => $houses]);
+
     }
     public function save(Request $request)
     {
@@ -16,6 +18,7 @@ class FormController extends Controller
             'name' => 'required|max:255',
             'actor' => 'required|max:255',
             'description' => 'required|max:255',
+            'house_id' => 'required|exists:houses,id',
         ]);
         $character = tap(new \App\Models\Character($data))->save();
         return redirect('/');

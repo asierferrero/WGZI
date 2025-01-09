@@ -14,6 +14,7 @@
                         <tr>
                             <th>{{ __('messages.name') }}</th>
                             <th>{{ __('messages.actor') }}</th>
+                            <th>{{ __('messages.house') }}</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -21,6 +22,7 @@
                             <tr>
                                 <td>{{ $character->name }}</td>
                                 <td>{{ $character->actor }}</td>
+                                <td>{{ $character->house->name }}</td>
                                 <td><a href="{{ route('delete', ['id' => $character->id]) }}" class="btn">🗑️</a></td>
                                 <td><a href="{{ route('edit', ['id' => $character->id]) }}" class="btn">✏️</a></td>
                             </tr>

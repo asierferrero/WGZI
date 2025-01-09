@@ -16,10 +16,13 @@ class CharacterFactory extends Factory
      */
     public function definition(): array
     {
+        $houses = \App\Models\House::pluck('id')->toArray();
+        
         return [
             'actor' => $this->faker->sentence,
             'name' => $this->faker->sentence,
             'description' => $this->faker->text(200),
+            'house_id' => $this->faker->randomElement($houses),
         ];
     }
 }
